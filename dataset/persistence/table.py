@@ -407,6 +407,10 @@ class Table(object):
 
             # just return the first 10 rows
             results = table.find(country='France', _limit=10)
+            
+        Using ``_offset``::
+            # just return rows from 2 to 12
+            results = table.find(country='France', _limit=10, _offset=2)      
 
         You can sort the results by single or multiple columns. Append a minus sign
         to the column name for descending order::
